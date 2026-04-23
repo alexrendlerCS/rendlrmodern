@@ -372,7 +372,7 @@ export function WhyRendlr() {
   };
 
   return (
-    <section style={{ padding: "7rem 2.5rem" }}>
+    <section style={{ padding: "4rem 2.5rem" }}>
       <div style={{ marginBottom: "3rem" }}>
         <SectionLabel>Why Rendlr</SectionLabel>
         <h2

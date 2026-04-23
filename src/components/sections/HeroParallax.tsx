@@ -67,8 +67,8 @@ export function HeroParallax({ products }: { products: ParallaxCard[] }) {
     <div
       ref={ref}
       style={{
-        height: "300vh",
-        paddingTop: "10rem",
+        height: "200vh",
+        paddingTop: "8rem",
         paddingBottom: "2rem",
         overflow: "hidden",
         position: "relative",
