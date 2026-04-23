@@ -303,7 +303,7 @@ function StepsNav({
                 >
                   {isCompleted ? <IconCheck /> : <span>{stepIdx + 1}</span>}
                 </span>
-                <span style={{ display: window.innerWidth < 640 ? "none" : "inline-block" }}>
+                <span style={{ display: typeof window !== "undefined" && window.innerWidth < 640 ? "none" : "inline-block" }}>
                   {step.name}
                 </span>
               </button>
