@@ -156,8 +156,20 @@ export function Services() {
   };
 
   return (
-    <section style={{ padding: "3rem 2.5rem 3rem", position: "relative", overflow: "visible" }}>
-      <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+    <>
+      <style jsx>{`
+        @media (max-width: 768px) {
+          .services-container {
+            padding: 2rem 1.25rem !important;
+          }
+          .orbital-container {
+            height: 500px !important;
+            margin-top: 1rem !important;
+          }
+        }
+      `}</style>
+      <section className="services-container" style={{ padding: "3rem 2.5rem 3rem", position: "relative", overflow: "visible" }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
         <Reveal>
           <SectionLabel>What We Do</SectionLabel>
         </Reveal>
@@ -196,6 +208,7 @@ export function Services() {
         <div
           ref={containerRef}
           onClick={handleContainerClick}
+          className="orbital-container"
           style={{
             width: "100%",
             height: "700px",
@@ -553,5 +566,6 @@ export function Services() {
         </div>
       </div>
     </section>
+    </>
   );
 }

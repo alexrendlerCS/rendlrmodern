@@ -64,21 +64,35 @@ export function HeroParallax({ products }: { products: ParallaxCard[] }) {
   );
 
   return (
-    <div
-      ref={ref}
-      style={{
-        height: "200vh",
-        paddingTop: "8rem",
-        paddingBottom: "2rem",
-        overflow: "hidden",
-        position: "relative",
-        display: "flex",
-        flexDirection: "column",
-        perspective: "1000px",
-        // @ts-ignore
-        transformStyle: "preserve-3d",
-      }}
-    >
+    <>
+      <style jsx>{`
+        @media (max-width: 768px) {
+          .hero-container {
+            height: 150vh !important;
+            padding-top: 6rem !important;
+          }
+          .hero-row {
+            gap: 0.75rem !important;
+            margin-bottom: 0.75rem !important;
+          }
+        }
+      `}</style>
+      <div
+        ref={ref}
+        className="hero-container"
+        style={{
+          height: "200vh",
+          paddingTop: "8rem",
+          paddingBottom: "2rem",
+          overflow: "hidden",
+          position: "relative",
+          display: "flex",
+          flexDirection: "column",
+          perspective: "1000px",
+          // @ts-ignore
+          transformStyle: "preserve-3d",
+        }}
+      >
       {/* Background glow */}
       <div
         style={{
@@ -110,6 +124,7 @@ export function HeroParallax({ products }: { products: ParallaxCard[] }) {
       >
         {/* Row 1 — right */}
         <motion.div
+          className="hero-row"
           style={{
             display: "flex",
             flexDirection: "row-reverse",
@@ -124,6 +139,7 @@ export function HeroParallax({ products }: { products: ParallaxCard[] }) {
 
         {/* Row 2 — left */}
         <motion.div
+          className="hero-row"
           style={{
             display: "flex",
             gap: "1.25rem",
@@ -137,6 +153,7 @@ export function HeroParallax({ products }: { products: ParallaxCard[] }) {
 
         {/* Row 3 — right */}
         <motion.div
+          className="hero-row"
           style={{ display: "flex", flexDirection: "row-reverse", gap: "1.25rem" }}
         >
           {thirdRow.map((card, i) => (
@@ -145,25 +162,45 @@ export function HeroParallax({ products }: { products: ParallaxCard[] }) {
         </motion.div>
       </motion.div>
     </div>
+    </>
   );
 }
 
 function HeroHeader() {
   return (
-    <div
-      style={{
-        maxWidth: "1280px",
-        margin: "0 auto",
-        padding: "0 2.5rem 4rem",
-        width: "100%",
-        display: "flex",
-        alignItems: "flex-end",
-        justifyContent: "space-between",
-        gap: "2rem",
-        position: "relative",
-        zIndex: 2,
-      }}
-    >
+    <>
+      <style jsx>{`
+        @media (max-width: 768px) {
+          .hero-header-container {
+            padding: 0 1.25rem 2rem !important;
+            flex-direction: column !important;
+            align-items: flex-start !important;
+          }
+          .hero-buttons {
+            flex-direction: column !important;
+            width: 100%;
+          }
+          .hero-buttons a {
+            width: 100%;
+            text-align: center;
+          }
+        }
+      `}</style>
+      <div
+        className="hero-header-container"
+        style={{
+          maxWidth: "1280px",
+          margin: "0 auto",
+          padding: "0 2.5rem 4rem",
+          width: "100%",
+          display: "flex",
+          alignItems: "flex-end",
+          justifyContent: "space-between",
+          gap: "2rem",
+          position: "relative",
+          zIndex: 2,
+        }}
+      >
       <div>
         <motion.div
           initial={{ opacity: 0, y: 16 }}
@@ -211,7 +248,7 @@ function HeroHeader() {
           We build fast, secure, high-performing websites and AI-powered products
           that turn visitors into customers.
         </p>
-        <div style={{ display: "flex", gap: "0.75rem", alignItems: "center" }}>
+        <div className="hero-buttons" style={{ display: "flex", gap: "0.75rem", alignItems: "center" }}>
           <Link
             href="/getting-started"
             style={{
@@ -246,6 +283,7 @@ function HeroHeader() {
         </div>
       </motion.div>
     </div>
+    </>
   );
 }
 

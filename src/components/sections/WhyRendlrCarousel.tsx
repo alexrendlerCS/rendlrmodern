@@ -329,6 +329,7 @@ export function WhyRendlr() {
         <motion.img
           src={steps[step].image}
           alt={steps[step].title}
+          className="carousel-image"
           style={{
             position: "absolute",
             width: "50%",
@@ -350,6 +351,7 @@ export function WhyRendlr() {
           <motion.img
             src={steps[step].image2}
             alt={`${steps[step].title} 2`}
+            className="carousel-image-second"
             style={{
               position: "absolute",
               width: "50%",
@@ -372,8 +374,28 @@ export function WhyRendlr() {
   };
 
   return (
-    <section style={{ padding: "4rem 2.5rem" }}>
-      <div style={{ marginBottom: "3rem" }}>
+    <>
+      <style jsx>{`
+        @media (max-width: 768px) {
+          .why-rendlr-section {
+            padding: 2rem 1.25rem !important;
+          }
+          .carousel-image {
+            width: 70% !important;
+            right: 5% !important;
+            top: 60% !important;
+            max-height: 250px !important;
+          }
+          .carousel-image-second {
+            width: 70% !important;
+            right: 20% !important;
+            top: 45% !important;
+            max-height: 250px !important;
+          }
+        }
+      `}</style>
+      <section className="why-rendlr-section" style={{ padding: "4rem 2.5rem" }}>
+        <div style={{ marginBottom: "3rem" }}>
         <SectionLabel>Why Rendlr</SectionLabel>
         <h2
           style={{
@@ -408,5 +430,6 @@ export function WhyRendlr() {
         </motion.div>
       </div>
     </section>
+    </>
   );
 }
