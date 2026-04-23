@@ -1,3 +1,4 @@
+"use client";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { getStartedServices } from "@/lib/data";
@@ -62,7 +63,7 @@ export function GetStartedGrid() {
             textAlign: "center",
             background: "var(--c1)",
             borderRadius: "16px",
-            border: "1px solid rgba(201,169,110,0.12)",
+            border: "1px solid rgba(111,179,255,0.12)",
             position: "relative",
             overflow: "hidden",
           }}
@@ -76,7 +77,7 @@ export function GetStartedGrid() {
               width: "500px",
               height: "300px",
               background:
-                "radial-gradient(ellipse, rgba(201,169,110,0.07), transparent 70%)",
+                "radial-gradient(ellipse, rgba(111,179,255,0.07), transparent 70%)",
               pointerEvents: "none",
             }}
           />
@@ -136,7 +137,7 @@ export function GetStartedGrid() {
                 style={{
                   color: "var(--cw)",
                   padding: "0.85rem 2rem",
-                  border: "1px solid rgba(201,169,110,0.25)",
+                  border: "1px solid rgba(111,179,255,0.25)",
                   borderRadius: "4px",
                   textDecoration: "none",
                   fontSize: "0.85rem",
@@ -169,7 +170,7 @@ function GsCard({ icon, title, desc }: { icon: string; title: string; desc: stri
       }}
       onMouseEnter={(e) => {
         const el = e.currentTarget as HTMLElement;
-        el.style.borderColor = "rgba(201,169,110,0.2)";
+  el.style.borderColor = "rgba(111,179,255,0.2)";
         el.style.transform = "translateY(-4px)";
         const bar = el.querySelector(".gs-bar") as HTMLElement;
         if (bar) bar.style.transform = "scaleX(1)";

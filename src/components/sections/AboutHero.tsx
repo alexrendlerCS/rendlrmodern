@@ -24,7 +24,7 @@ export function AboutHero() {
           width: "50%",
           height: "100%",
           background:
-            "radial-gradient(ellipse at 80% 50%, rgba(201,169,110,0.05), transparent 70%)",
+      "radial-gradient(ellipse at 80% 50%, rgba(111,179,255,0.05), transparent 70%)",
           pointerEvents: "none",
         }}
       />
@@ -83,7 +83,7 @@ export function AboutHero() {
             style={{
               color: "var(--cw)",
               padding: "0.85rem 2rem",
-              border: "1px solid rgba(201,169,110,0.25)",
+              border: "1px solid rgba(111,179,255,0.25)",
               borderRadius: "4px",
               textDecoration: "none",
               fontSize: "0.85rem",
@@ -102,7 +102,7 @@ export function AboutHero() {
               style={{
                 fontSize: "0.75rem",
                 padding: "0.3rem 0.9rem",
-                border: "1px solid rgba(201,169,110,0.25)",
+                border: "1px solid rgba(111,179,255,0.25)",
                 borderRadius: "4px",
                 color: "var(--ca)",
                 letterSpacing: "0.06em",

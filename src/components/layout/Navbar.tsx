@@ -31,7 +31,7 @@ export function Navbar() {
         background: scrolled ? "rgba(10,10,10,0.85)" : "transparent",
         backdropFilter: scrolled ? "blur(20px)" : "none",
         borderBottom: scrolled
-          ? "1px solid rgba(201,169,110,0.12)"
+          ? "1px solid rgba(111,179,255,0.12)"
           : "1px solid transparent",
       }}
     >
@@ -46,28 +46,26 @@ export function Navbar() {
           letterSpacing: "-0.02em",
           display: "flex",
           alignItems: "center",
-          gap: "10px",
+          gap: "6px",
         }}
       >
+        <img
+          src="/Logo-Header.png"
+          alt="Rendlr"
+          style={{ width: 28, height: 28, objectFit: "contain", display: "block" }}
+        />
         <span
           style={{
-            width: "28px",
-            height: "28px",
-            border: "1.5px solid var(--ca)",
-            borderRadius: "6px",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            fontSize: "0.65rem",
-            fontFamily: "var(--sans)",
-            fontWeight: 500,
-            color: "var(--ca)",
-            letterSpacing: "0.05em",
+            display: "inline-block",
+            marginLeft: "-4px",
+            fontFamily: "var(--serif), Georgia, serif",
+            fontSize: "1.3rem",
+            color: "var(--cw)",
+            letterSpacing: "-0.02em",
           }}
         >
-          R
+          endlr
         </span>
-        Rendlr
       </Link>
 
       {/* Links */}

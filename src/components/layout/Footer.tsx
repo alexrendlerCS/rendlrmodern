@@ -20,13 +20,14 @@ export function Footer() {
         <div>
           <div
             style={{
-              fontFamily: "var(--serif), Georgia, serif",
-              fontSize: "1.8rem",
-              letterSpacing: "-0.02em",
+              display: "flex",
+              alignItems: "center",
+              gap: "8px",
               marginBottom: "0.75rem",
             }}
           >
-            Rendlr
+            <img src="/Logo-Header.png" alt="Rendlr" style={{ width: 36, height: 36, objectFit: "contain", display: "block" }} />
+            <span style={{ fontFamily: "var(--serif), Georgia, serif", fontSize: "1.5rem", letterSpacing: "-0.02em", color: "var(--cw)" }}>endlr</span>
           </div>
           <p style={{ color: "var(--cg)", fontSize: "0.85rem", lineHeight: 1.6, maxWidth: "280px" }}>
             Modern web solutions built for growth. Based in Carlsbad, CA.
@@ -109,7 +110,7 @@ export function Footer() {
         <span
           style={{
             fontSize: "0.7rem",
-            color: "rgba(201,169,110,0.4)",
+            color: "rgba(111,179,255,0.4)",
             letterSpacing: "0.05em",
           }}
         >

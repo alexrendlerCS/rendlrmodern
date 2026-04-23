@@ -1,3 +1,4 @@
+"use client";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { whyItems } from "@/lib/data";
@@ -55,7 +56,7 @@ function WhyCard({ num, title, desc }: { num: string; title: string; desc: strin
       }}
       onMouseEnter={(e) => {
         const el = e.currentTarget as HTMLElement;
-        el.style.borderColor = "rgba(201,169,110,0.25)";
+  el.style.borderColor = "rgba(111,179,255,0.25)";
         el.style.transform = "translateY(-4px)";
         el.style.background = "var(--c2)";
       }}
@@ -70,7 +71,7 @@ function WhyCard({ num, title, desc }: { num: string; title: string; desc: strin
         style={{
           fontFamily: "var(--serif), Georgia, serif",
           fontSize: "2.5rem",
-          color: "rgba(201,169,110,0.2)",
+          color: "rgba(111,179,255,0.2)",
           lineHeight: 1,
           marginBottom: "1rem",
         }}

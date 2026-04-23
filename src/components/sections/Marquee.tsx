@@ -11,7 +11,7 @@ export function Marquee() {
   return (
     <div
       style={{
-        padding: "2.5rem 0",
+        padding: "1rem 0",
         overflow: "hidden",
         borderTop: "1px solid rgba(255,255,255,0.04)",
         borderBottom: "1px solid rgba(255,255,255,0.04)",
@@ -31,12 +31,7 @@ export function Marquee() {
             style={{
               fontFamily: "var(--serif), Georgia, serif",
               fontSize: "1.3rem",
-              color:
-                item === "·"
-                  ? "rgba(201,169,110,0.2)"
-                  : i % 6 === 2
-                  ? "rgba(201,169,110,0.5)"
-                  : "rgba(201,169,110,0.25)",
+              color: item === "·" ? "rgba(111,179,255,0.2)" : i % 6 === 2 ? "rgba(111,179,255,0.5)" : "rgba(111,179,255,0.25)",
               whiteSpace: "nowrap",
               letterSpacing: "-0.02em",
               fontStyle: i % 6 === 2 ? "italic" : "normal",

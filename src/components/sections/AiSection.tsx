@@ -1,3 +1,4 @@
+"use client";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { certifications, skills } from "@/lib/data";
@@ -27,7 +28,7 @@ export function AiSection() {
         style={{
           height: "1px",
           background:
-            "linear-gradient(to right, transparent, rgba(201,169,110,0.2), transparent)",
+            "linear-gradient(to right, transparent, rgba(111,179,255,0.2), transparent)",
           margin: "0 2.5rem",
         }}
       />
@@ -109,7 +110,7 @@ export function AiSection() {
           <div
             style={{
               background: "var(--c2)",
-              border: "1px solid rgba(201,169,110,0.15)",
+              border: "1px solid rgba(111,179,255,0.15)",
               borderRadius: "16px",
               padding: "2.5rem",
               position: "relative",
@@ -121,7 +122,7 @@ export function AiSection() {
                 position: "absolute",
                 inset: 0,
                 background:
-                  "radial-gradient(ellipse at 30% 30%, rgba(201,169,110,0.06), transparent 60%)",
+                  "radial-gradient(ellipse at 30% 30%, rgba(111,179,255,0.06), transparent 60%)",
                 pointerEvents: "none",
               }}
             />
@@ -143,7 +144,7 @@ export function AiSection() {
                 }}
               >
                 <span
-                  style={{ color: "rgba(201,169,110,0.25)", minWidth: "16px" }}
+                  style={{ color: "rgba(111,179,255,0.25)", minWidth: "16px" }}
                 >
                   {line.num}
                 </span>
@@ -174,7 +175,7 @@ export function CredentialsSection() {
         style={{
           height: "1px",
           background:
-            "linear-gradient(to right, transparent, rgba(201,169,110,0.2), transparent)",
+            "linear-gradient(to right, transparent, rgba(111,179,255,0.2), transparent)",
           margin: "0 2.5rem",
         }}
       />
@@ -208,7 +209,7 @@ export function CredentialsSection() {
               <div
                 key={cert.title}
                 style={{
-                  border: "1px solid rgba(201,169,110,0.15)",
+                  border: "1px solid rgba(111,179,255,0.15)",
                   borderRadius: "10px",
                   padding: "1.5rem",
                   marginBottom: "1rem",
@@ -218,12 +219,12 @@ export function CredentialsSection() {
                 }}
                 onMouseEnter={(e) => {
                   const el = e.currentTarget as HTMLElement;
-                  el.style.borderColor = "rgba(201,169,110,0.35)";
+                  el.style.borderColor = "rgba(111,179,255,0.35)";
                   el.style.transform = "translateX(4px)";
                 }}
                 onMouseLeave={(e) => {
                   const el = e.currentTarget as HTMLElement;
-                  el.style.borderColor = "rgba(201,169,110,0.15)";
+                  el.style.borderColor = "rgba(111,179,255,0.15)";
                   el.style.transform = "translateX(0)";
                 }}
               >
@@ -271,7 +272,7 @@ export function CredentialsSection() {
                   }}
                   onMouseEnter={(e) => {
                     const el = e.currentTarget as HTMLElement;
-                    el.style.borderColor = "rgba(201,169,110,0.4)";
+                    el.style.borderColor = "rgba(111,179,255,0.4)";
                     el.style.color = "var(--ca)";
                   }}
                   onMouseLeave={(e) => {

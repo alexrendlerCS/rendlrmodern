@@ -68,7 +68,7 @@ export function ProjectsGrid() {
                 }`,
                 background:
                   active === f.value
-                    ? "rgba(201,169,110,0.06)"
+                    ? "rgba(111,179,255,0.06)"
                     : "transparent",
                 color: active === f.value ? "var(--ca)" : "var(--cg)",
                 cursor: "pointer",
@@ -132,7 +132,7 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
       }}
       onMouseEnter={(e) => {
         const el = e.currentTarget as HTMLElement;
-        el.style.borderColor = "rgba(201,169,110,0.2)";
+  el.style.borderColor = "rgba(111,179,255,0.2)";
         el.style.transform = "translateY(-6px)";
         el.style.boxShadow = "0 24px 60px rgba(0,0,0,0.5)";
       }}
@@ -156,10 +156,10 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
         }}
       >
         <span
-          style={{
+            style={{
             fontFamily: "var(--serif), Georgia, serif",
             fontSize: "1.5rem",
-            color: "rgba(201,169,110,0.3)",
+            color: "rgba(111,179,255,0.3)",
             letterSpacing: "-0.02em",
           }}
         >
@@ -181,8 +181,8 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
             letterSpacing: "0.1em",
             textTransform: "uppercase",
             padding: "0.3rem 0.7rem",
-            background: "rgba(201,169,110,0.15)",
-            border: "1px solid rgba(201,169,110,0.25)",
+            background: "rgba(111,179,255,0.15)",
+            border: "1px solid rgba(111,179,255,0.25)",
             borderRadius: "3px",
             color: "var(--ca)",
           }}

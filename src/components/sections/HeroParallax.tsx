@@ -18,7 +18,7 @@ interface ParallaxCard {
 }
 
 const CARD_PALETTES = [
-  "rgba(201,169,110,0.06)",
+  "rgba(111,179,255,0.06)",
   "rgba(100,140,200,0.06)",
   "rgba(120,180,140,0.06)",
   "rgba(180,110,120,0.06)",
@@ -69,7 +69,7 @@ export function HeroParallax({ products }: { products: ParallaxCard[] }) {
       style={{
         height: "300vh",
         paddingTop: "10rem",
-        paddingBottom: "10rem",
+        paddingBottom: "2rem",
         overflow: "hidden",
         position: "relative",
         display: "flex",
@@ -85,7 +85,7 @@ export function HeroParallax({ products }: { products: ParallaxCard[] }) {
           position: "absolute",
           inset: 0,
           background:
-            "radial-gradient(ellipse 80% 60% at 60% 40%, rgba(201,169,110,0.06) 0%, transparent 70%)",
+            "radial-gradient(ellipse 80% 60% at 60% 40%, rgba(111,179,255,0.06) 0%, transparent 70%)",
           pointerEvents: "none",
         }}
       />
@@ -95,7 +95,7 @@ export function HeroParallax({ products }: { products: ParallaxCard[] }) {
           position: "absolute",
           inset: 0,
           backgroundImage:
-            "linear-gradient(rgba(201,169,110,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(201,169,110,0.04) 1px, transparent 1px)",
+            "linear-gradient(rgba(111,179,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(111,179,255,0.04) 1px, transparent 1px)",
           backgroundSize: "80px 80px",
           maskImage:
             "radial-gradient(ellipse 80% 80% at 50% 50%, black 20%, transparent 100%)",
@@ -233,7 +233,7 @@ function HeroHeader() {
             style={{
               color: "var(--cw)",
               padding: "0.85rem 1.75rem",
-              border: "1px solid rgba(201,169,110,0.25)",
+              border: "1px solid rgba(111,179,255,0.25)",
               borderRadius: "4px",
               textDecoration: "none",
               fontSize: "0.82rem",
@@ -274,7 +274,7 @@ function ProductCard({
           height: "144px",
           borderRadius: "10px",
           overflow: "hidden",
-          border: "1px solid rgba(201,169,110,0.12)",
+          border: "1px solid rgba(111,179,255,0.12)",
           background: CARD_PALETTES[index % CARD_PALETTES.length],
           position: "relative",
           flexShrink: 0,
@@ -283,11 +283,11 @@ function ProductCard({
         }}
         onMouseEnter={(e) => {
           (e.currentTarget as HTMLElement).style.borderColor =
-            "rgba(201,169,110,0.35)";
+            "rgba(111,179,255,0.35)";
         }}
         onMouseLeave={(e) => {
           (e.currentTarget as HTMLElement).style.borderColor =
-            "rgba(201,169,110,0.12)";
+            "rgba(111,179,255,0.12)";
         }}
       >
         {/* Top accent line */}
@@ -297,9 +297,25 @@ function ProductCard({
             top: 0, left: 0, right: 0,
             height: "1px",
             background:
-              "linear-gradient(to right, transparent, rgba(201,169,110,0.3), transparent)",
+              "linear-gradient(to right, transparent, rgba(111,179,255,0.3), transparent)",
           }}
         />
+
+        {/* Thumbnail (if provided) */}
+        {"thumbnail" in card && card.thumbnail ? (
+          <img
+            src={(card as any).thumbnail}
+            alt={card.label}
+            style={{
+              position: "absolute",
+              inset: 0,
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              zIndex: 0,
+            }}
+          />
+        ) : null}
 
         {/* Icon */}
         <div
@@ -314,6 +330,7 @@ function ProductCard({
             color: "var(--ca)",
             opacity: 0.15,
             letterSpacing: "-0.04em",
+            zIndex: 1,
           }}
         >
           {card.icon}
@@ -330,8 +347,8 @@ function ProductCard({
             textTransform: "uppercase",
             padding: "3px 7px",
             borderRadius: "3px",
-            background: "rgba(201,169,110,0.12)",
-            border: "1px solid rgba(201,169,110,0.2)",
+            background: "rgba(111,179,255,0.12)",
+            border: "1px solid rgba(111,179,255,0.2)",
             color: "var(--ca)",
           }}
         >
@@ -364,7 +381,8 @@ function ProductCard({
           style={{
             position: "absolute",
             inset: 0,
-            background: "rgba(201,169,110,0.06)",
+            background: "rgba(111,179,255,0.06)",
+            zIndex: 2,
           }}
         />
       </Link>

@@ -1,3 +1,4 @@
+"use client";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { services } from "@/lib/data";
@@ -45,8 +46,8 @@ export function Services() {
             display: "grid",
             gridTemplateColumns: "repeat(2, 1fr)",
             gap: "1px",
-            background: "rgba(201,169,110,0.1)",
-            border: "1px solid rgba(201,169,110,0.1)",
+            background: "rgba(111,179,255,0.1)",
+            border: "1px solid rgba(111,179,255,0.1)",
             borderRadius: "12px",
             overflow: "hidden",
           }}
@@ -90,7 +91,7 @@ function ServiceCard({
         style={{
           width: "40px",
           height: "40px",
-          border: "1px solid rgba(201,169,110,0.3)",
+          border: "1px solid rgba(111,179,255,0.3)",
           borderRadius: "8px",
           display: "flex",
           alignItems: "center",
